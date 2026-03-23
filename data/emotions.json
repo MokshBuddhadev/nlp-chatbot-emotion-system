@@ -1,0 +1,25 @@
+{
+  "happy": [
+    "i am happy",
+    "feeling good",
+    "great day"
+  ],
+
+  "sad": [
+    "i am sad",
+    "feeling bad",
+    "depressed"
+  ],
+
+  "angry": [
+    "i am angry",
+    "very mad",
+    "frustrated"
+  ],
+
+  "neutral": [
+    "hello",
+    "hi",
+    "hey"
+  ]
+}
