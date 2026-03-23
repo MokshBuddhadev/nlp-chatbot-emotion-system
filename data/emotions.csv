@@ -2,13 +2,18 @@ text,label
 i am happy,happy
 i feel good,happy
 today is great,happy
+i am excited,happy
 i am sad,sad
 feeling bad,sad
 i am depressed,sad
+very upset,sad
 i am angry,angry
 very frustrated,angry
 i am mad,angry
+this is annoying,angry
 hello,neutral
 hi,neutral
 hey,neutral
 good morning,neutral
+how are you,neutral
+nice to meet you,neutral

@@ -1,6 +1,5 @@
-import json
-import random
 import pandas as pd
+import random
 
 from sklearn.svm import LinearSVC
 
@@ -12,7 +11,7 @@ from src.preprocessing import clean_text
 # Load dataset
 # -----------------------
 
-df = load_dataset("data/intents.csv")
+df = load_dataset("data/emotions.csv")
 
 texts = df["clean"]
 labels = df["label"]
@@ -26,7 +25,7 @@ X, vectorizer = tfidf_features(texts)
 
 
 # -----------------------
-# Train model (SVM best)
+# Train model
 # -----------------------
 
 model = LinearSVC()
@@ -35,18 +34,42 @@ model.fit(X, labels)
 
 
 # -----------------------
-# Load responses
+# Responses
 # -----------------------
 
-with open("data/responses.json") as f:
-    responses = json.load(f)
+responses = {
+
+    "happy": [
+        "Glad to hear that!",
+        "That's great!",
+        "Nice!"
+    ],
+
+    "sad": [
+        "I hope things get better.",
+        "Stay strong.",
+        "I'm here for you."
+    ],
+
+    "angry": [
+        "Please stay calm.",
+        "Take a deep breath.",
+        "Relax, everything will be okay."
+    ],
+
+    "neutral": [
+        "Hello!",
+        "How can I help?",
+        "Tell me more."
+    ]
+}
 
 
 # -----------------------
-# Predict intent
+# Predict emotion
 # -----------------------
 
-def predict(text):
+def predict_emotion(text):
 
     text = clean_text(text)
 
@@ -61,34 +84,33 @@ def predict(text):
 # Get response
 # -----------------------
 
-def get_response(tag):
+def emotion_reply(text):
 
-    if tag in responses:
-        return random.choice(responses[tag])
+    emotion = predict_emotion(text)
 
-    return "I don't understand"
+    if emotion in responses:
+        return random.choice(responses[emotion])
+
+    return "Okay"
 
 
 # -----------------------
-# Chat loop
+# Test
 # -----------------------
 
 def chat():
 
-    print("Chatbot started (type quit)")
+    print("Emotion chatbot started")
 
     while True:
 
         user = input("You: ")
 
-        if user.lower() == "quit":
+        if user == "quit":
             break
 
-        tag = predict(user)
+        print("Bot:", emotion_reply(user))
 
-        reply = get_response(tag)
-
-        print("Bot:", reply)
 
 if __name__ == "__main__":
     chat()

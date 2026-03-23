@@ -27,7 +27,11 @@ def bow_features(texts):
 # TF-IDF
 def tfidf_features(texts):
 
-    vectorizer = TfidfVectorizer()
+    vectorizer = TfidfVectorizer(
+        ngram_range=(1,2),
+        min_df=1,
+        max_df=0.9
+    )
 
     X = vectorizer.fit_transform(texts)
 

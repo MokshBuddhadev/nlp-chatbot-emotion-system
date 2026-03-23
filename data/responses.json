@@ -1,0 +1,28 @@
+{
+  "nlp": [
+    "NLP stands for Natural Language Processing",
+    "NLP allows computers to understand human language"
+  ],
+
+  "ai": [
+    "AI means Artificial Intelligence",
+    "AI simulates human intelligence"
+  ],
+
+  "applications": [
+    "AI is used in healthcare, robotics, chatbots",
+    "NLP is used in translation and voice assistants"
+  ],
+
+  "ml": [
+    "Machine learning allows computers to learn from data"
+  ],
+
+  "dl": [
+    "Deep learning is a subset of machine learning"
+  ],
+
+  "chatbot": [
+    "A chatbot is a program that talks with users"
+  ]
+}
