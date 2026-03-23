@@ -1,0 +1,14 @@
+User: what is nlp
+Bot: NLP stands for Natural Language Processing
+
+User: what is ai
+Bot: AI means Artificial Intelligence
+
+User: applications of ai
+Bot: AI is used in chatbots, healthcare
+
+User: i am sad
+Bot: I hope things get better
+
+User: i am happy
+Bot: Glad to hear that
