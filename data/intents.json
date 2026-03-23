@@ -1,0 +1,36 @@
+{
+  "intents": [
+
+    {
+      "tag": "nlp",
+      "patterns": ["what is nlp", "define nlp", "nlp meaning"],
+      "responses": [
+        "NLP stands for Natural Language Processing",
+        "NLP allows computers to understand human language"
+      ]
+    },
+
+    {
+      "tag": "ai",
+      "patterns": ["what is ai", "define ai", "ai meaning"],
+      "responses": [
+        "AI means Artificial Intelligence",
+        "AI is the simulation of human intelligence"
+      ]
+    },
+
+    {
+      "tag": "applications",
+      "patterns": [
+        "applications of ai",
+        "uses of ai",
+        "uses of nlp"
+      ],
+      "responses": [
+        "AI is used in chatbots, healthcare, robotics",
+        "NLP is used in translation, chatbots, voice assistants"
+      ]
+    }
+
+  ]
+}
