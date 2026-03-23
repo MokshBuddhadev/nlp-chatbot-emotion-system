@@ -10,7 +10,7 @@ stemmer = PorterStemmer()
 stop_words = set(stopwords.words("english"))
 
 
-def preprocess(text):
+def clean_text(text):
 
     text = text.lower()
 
@@ -22,4 +22,4 @@ def preprocess(text):
 
     tokens = [stemmer.stem(w) for w in tokens]
 
-    return tokens
+    return " ".join(tokens)
